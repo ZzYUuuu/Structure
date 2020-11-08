@@ -4,19 +4,19 @@ using namespace std;
 
 typedef enum{DG,DN,UDG,UDN} GraphKind; //The kind of the graph
 //DG(Directed graph) UDG(Undirected graph) DN(Direct net) UDN(Undirect net)
-typedef char VectexData; //Assuming vertex data is char
+typedef char VertexData; //Assuming vertex data is char
 typedef int ArcNode;//To save 1 or 0
 
 class AdjMarix{
 public:
 	int vexnum, arcnum; //Graph's node number and radian number
-	VectexData vexs[MAX_VERTEX_NUM];//The array to save every node
+	VertexData vexs[MAX_VERTEX_NUM];//The array to save every node
 	ArcNode arcs[MAX_VERTEX_NUM][MAX_VERTEX_NUM];//The Two-dimensional array to save the line
 	GraphKind kind;
 };
 
 //if node V in the G, return the V'index in G , else return  NULL
-int LocateVertex(AdjMarix &g, VectexData v){
+int LocateVertex(AdjMarix &g, VertexData v){
 	for(int i = 0; i < g.vexnum; ++i){
 		if(g.vexs[i]==v){
 			return i;
