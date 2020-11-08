@@ -45,7 +45,7 @@ void createAdjMarixGraph(AdjMarix &g, GraphKind kind){
 	cin >> l;
 	g.arcnum = l;
 
-	for(int i = 0; i < n; ++i){
+	for(int i = 0; i < l; ++i){
 		cout << "输入第" << i+1 << "条边的信息：" ;
 		scanf(" %c,%c",&V,&W);
 		vi = LocateVertex(g,V);// To find v'index
